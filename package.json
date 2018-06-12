@@ -4,6 +4,7 @@
   "description": "A template project for spring boot/react.js",
   "main": "index.js",
   "dependencies": {
+    "babel-plugin-rewire": "^1.1.0",
     "babel-preset-env": "^1.7.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",

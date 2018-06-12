@@ -4,9 +4,11 @@ class Post extends React.Component{
 	render() {
 		return (
 
-		<div className='post-content' data-testid='post-content'>
-            {this.props.post.content} - {this.props.post.createdAt}
-        </div>
+        <tr>
+            <td>{this.props.post.content}</td>
+            <td>{this.props.post.createdAt}</td>
+
+        </tr>
 
 		)
 	}

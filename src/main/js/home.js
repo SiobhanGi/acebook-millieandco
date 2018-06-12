@@ -31,9 +31,7 @@ class Home extends React.Component {
 			headers: {'Content-Type': 'application/json'}
 		})
 		.then((res) => {
-			client({method: 'GET', path: '/api/posts'}).then(res => {
-				this.setState({posts: res.entity._embedded.posts});
-			});
+			this.loadPostsFromServer();
 		});
 	}
 

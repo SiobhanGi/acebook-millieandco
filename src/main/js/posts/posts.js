@@ -16,13 +16,16 @@ class Posts extends React.Component {
                     <h1>Posts</h1>
                 </div>
                 <div className="panel-body">
-                  <article className='posts-main'>
-                        <div className="panel-body">
-                        <div className='posts-items'>
-                            {posts}
-                        </div>
-                        </div>
-                  </article>
+                <div>
+                     <table className="table table-striped">
+                     <thead>
+                         <tr>
+                             <th>Message</th><th>Date</th>
+                         </tr>
+                     </thead>
+                     <tbody>{posts}</tbody>
+                     </table>
+                </div>
                 </div>
             </div>
 		)

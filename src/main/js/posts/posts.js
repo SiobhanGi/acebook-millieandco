@@ -1,8 +1,6 @@
 import React from 'react';
 import Post from './post'
 
-import { AddPost } from './addPost'
-
 const defaultProps = {
     posts: []
 };
@@ -17,7 +15,6 @@ class Posts extends React.Component {
         <h1 className='posts-title'>
           Posts
         </h1>
-        <AddPost />
   			<div className='posts-items'>
   				{posts}
   			</div>

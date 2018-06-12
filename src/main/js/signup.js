@@ -1,5 +1,6 @@
-const React = require('react');
-const client = require('./client');
+import React from 'react';
+import client from './client';
+import { Route, Redirect} from 'react-router';
 
 class Signup extends React.Component {
 	constructor(props) {
@@ -36,6 +37,7 @@ class Signup extends React.Component {
 		newUser['password'] = this.state.password;
 
 		this.createUser(newUser);
+		<Redirect to="/" />
 	}
 
 	render() {

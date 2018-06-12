@@ -1,19 +1,13 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import Enzyme, {shallow} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
 import Posts from '../posts/posts';
-import { render } from "react-testing-library";
-import "dom-testing-library/extend-expect";
 
-describe('Display multiple posts', function(){
+Enzyme.configure({adapter: new Adapter()});
 
-    const {getByTestId} = render(
-       <Posts />
-    );
+describe('<Posts />', () => {
+  it('displays a title', () => {
 
-    it('displays a title', function(){
-
-        expect(getByTestId("title-content")).toHaveTextContent("Posts")
-
-    })
-
-})
+  });
+});

@@ -45,7 +45,7 @@ class Signup extends React.Component {
 	render() {
 		return (
 			<div className="span3">
-				<h2>Sign Up</h2>
+				<h2 className="title">Sign Up</h2>
 				<form onSubmit={this.handleSubmit}>
 					<label>First Name</label>
 					<input type="text" name="firstName" onChange={this.handleChange} className = "first-name span3"/>

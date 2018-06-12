@@ -21,11 +21,18 @@ export class AddPost extends React.Component {
 
   render() {
     return (
+    <div className="panel panel-default">
+        <div className="panel-heading">
+            <h1>Posts</h1>
+        </div>
+        <div className="panel-body">
       <form onSubmit={this.handleSubmit} >
         <label htmlFor="content">Add post:</label>
         <input type="text" onChange={this.handleChange} value={this.state.value} required />
         <input type="submit" value="Submit" />
       </form>
+      </div>
+    </div>
     );
   }
 }

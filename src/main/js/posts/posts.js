@@ -12,12 +12,11 @@ class Posts extends React.Component {
 		);
 		return (
       <article className='posts-main'>
-        <h1 className='posts-title'>
-          Posts
-        </h1>
+            <div className="panel-body">
   			<div className='posts-items'>
   				{posts}
   			</div>
+  		    </div>
       </article>
 		)
 	}

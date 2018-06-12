@@ -17,22 +17,17 @@ export class AddPost extends React.Component {
     newPost['content'] = this.state.value
     this.props.createPost(newPost)
     event.preventDefault();
+    this.setState({ value: ' ' });
   }
 
   render() {
     return (
-    <div className="panel panel-default">
-        <div className="panel-heading">
-            <h1>Posts</h1>
-        </div>
-        <div className="panel-body">
       <form onSubmit={this.handleSubmit} >
-        <label htmlFor="content">Add post:</label>
-        <input type="text" onChange={this.handleChange} value={this.state.value} required />
+       <div className="col-md-6 .col-md-offset-3">
+        <input type="text" placeholder = "Add New Post" onChange={this.handleChange} value={this.state.value} required />
         <input type="submit" value="Submit" />
+       </div>
       </form>
-      </div>
-    </div>
     );
   }
 }

@@ -12,11 +12,16 @@ class Home extends React.Component {
 		this.createPost = this.createPost.bind(this);
 	}
 
-  componentDidMount() {
-    client({method: 'GET', path: '/api/posts'}).then(response => {
-      this.setState({posts: response.entity._embedded.posts});
-    });
-  }
+
+    componentDidMount() {
+       this.loadPostsFromServer();
+    }
+
+    loadPostsFromServer() {
+        client({method: 'GET', path: '/api/posts'}).then(response => {
+             this.setState({posts: response.entity._embedded.posts});
+        });
+    }
 
 	createPost(post) {
 		client({
@@ -32,13 +37,13 @@ class Home extends React.Component {
 		});
 	}
 
-  render() {
-    return (<div>
-			<AddPost createPost={this.createPost} />
-      <Posts posts={this.state.posts.reverse()}/>
-      </div>
-    )
-  }
+    render() {
+        return (<div>
+                <Posts posts={this.state.posts.reverse()}/>
+                <AddPost createPost={this.createPost} />
+          </div>
+        )
+    }
 }
 
 export default Home;

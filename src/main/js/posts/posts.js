@@ -11,14 +11,23 @@ class Posts extends React.Component {
 			<Post key={post._links.self.href} post={post}/>
 		);
 		return (
-      <article className='posts-main'>
-        <h1 className='posts-title'>
-          Posts
-        </h1>
-  			<div className='posts-items'>
-  				{posts}
-  			</div>
-      </article>
+            <div className="panel panel-default">
+                <div className="panel-heading">
+                    <h1>Posts</h1>
+                </div>
+                <div className="panel-body">
+                <div>
+                     <table className="table table-striped">
+                     <thead>
+                         <tr>
+                             <th>Message</th><th>Date</th>
+                         </tr>
+                     </thead>
+                     <tbody>{posts}</tbody>
+                     </table>
+                </div>
+                </div>
+            </div>
 		)
 	}
 }

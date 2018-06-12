@@ -23,8 +23,8 @@ export class AddPost extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} >
-       <div className="col-md-6 .col-md-offset-3">
-        <input type="text" placeholder = "Add New Post" onChange={this.handleChange} value={this.state.value} required />
+        <div className="col-md-6 .col-md-offset-3">
+        <input className="post-input" type="text" placeholder = "Add New Post" onChange={this.handleChange} value={this.state.value} required />
         <input type="submit" value="Submit" />
        </div>
       </form>

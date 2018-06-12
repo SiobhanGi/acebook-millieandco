@@ -5,7 +5,7 @@ import { Route, Redirect} from 'react-router';
 class Signup extends React.Component {
 	constructor(props) {
 		super(props)
-		this.state = {}
+		this.state = { redirectToNewPage: false }
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleChange = this.handleChange.bind(this);
 	}
@@ -37,7 +37,9 @@ class Signup extends React.Component {
 		newUser['password'] = this.state.password;
 
 		this.createUser(newUser);
-		<Redirect to="/" />
+		this.setState(
+			{ redirectToNewPage: true }
+		);
 	}
 
 	render() {
@@ -55,6 +57,7 @@ class Signup extends React.Component {
 					<input type="password" name="password" onChange={this.handleChange} className = "password span3"/>
 					<input type="submit" value="Sign up" className = "submit btn btn-primary pull-right"/>
 				</form>
+				{ this.state.redirectToNewPage && <Redirect to="/" /> }
 			</div>
 		)
 	}

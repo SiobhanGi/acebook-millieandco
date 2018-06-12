@@ -19,7 +19,12 @@ module.exports = {
       .setValue('input.email', "luke@jedi.com")
       .setValue('input.password', "yoda11")
       .click('input.submit')
+
+    client
       .url("http://localhost:8080/api/users")
-      .
+      .assert.containsText('pre', `"firstName" : "Luke",
+      "lastName" : "Sky Walker",
+      "email" : "luke@jedi.com",
+      "password" : "yoda11"`)
   }
 }

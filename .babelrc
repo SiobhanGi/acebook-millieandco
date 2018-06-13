@@ -2,7 +2,7 @@
     "env": {
     "test": {
       "presets": ["env", "react", "stage-2"],
-      "plugins": ["transform-export-extensions"],
+      "plugins": ["transform-export-extensions", "rewire"],
       "only": [
         "./**/*.js",
         "node_modules/jest-runtime"

@@ -1,15 +1,22 @@
 package com.millieandco.acebook;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Data
+@ToString(exclude= "password")
 @Entity
 @Table(name = "users")
 public class User {
+
+    public static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder();
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,7 +32,11 @@ public class User {
     private String email;
 
     @Column(name = "password")
-    private String password;
+    private @JsonIgnore String password;
+
+    public void setPassword(String password) {
+        this.password = PASSWORD_ENCODER.encode(password);
+    }
 
     protected User() {
     }
@@ -34,12 +45,12 @@ public class User {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.password = password;
+        this.setPassword(password);
     }
 
     @Override
     public String toString() {
-        return String.format("User[id=%d, firstName='%s', lastName='%s', email='%s', password='%s']", id, firstName, lastName, email, password);
+        return String.format("User[id=%d, firstName='%s', lastName='%s', email='%s']", id, firstName, lastName, email);
     }
 }
 

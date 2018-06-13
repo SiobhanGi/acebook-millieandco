@@ -30,13 +30,8 @@ public class UserTest {
 	}
 
 	@Test
-	public void userHasPassword() {
-		assertEquals(user.getPassword(), "ihatejedis");
-	}
-
-	@Test
 	public void toStringReturnsCorrectString() {
-		assertEquals(user.toString(), "User[id=0, firstName='Kylo', lastName='Ren', email='kyloren@sithlord.com', password='ihatejedis']");
+		assertEquals(user.toString(), "User[id=0, firstName='Kylo', lastName='Ren', email='kyloren@sithlord.com']");
 	}
 
 }

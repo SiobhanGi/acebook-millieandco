@@ -10,7 +10,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.List;
 
@@ -45,10 +45,8 @@ public class UserRepositoryTest {
         assertEquals(users.get(0).getFirstName(), "Kylo");
         assertEquals(users.get(0).getLastName(), "Ren");
         assertEquals(users.get(0).getEmail(), "kyloren@sithlord.com");
-        assertEquals(users.get(0).getPassword(), "ihatejedis");
         assertEquals(users.get(1).getFirstName(), "Darth");
         assertEquals(users.get(1).getLastName(), "Maul");
         assertEquals(users.get(1).getEmail(), "darthmaul@sithlord.com");
-        assertEquals(users.get(1).getPassword(), "ihavehorns");
     }
 }

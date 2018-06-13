@@ -6,3 +6,5 @@ dependency-reduced-pom.xml
 /tests_output
 selenium-debug.log
 .DS_Store
+bundle.js
+bundle.js.map

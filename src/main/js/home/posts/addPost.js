@@ -1,6 +1,6 @@
 import React from 'react'
 
-export class AddPost extends React.Component {
+class AddPost extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}
@@ -32,4 +32,6 @@ export class AddPost extends React.Component {
   }
 }
 
-AddPost.defaultProps = {}
+AddPost.defaultProps = {};
+
+export default AddPost;

@@ -2,8 +2,8 @@ const React = require('react');
 const client = require('../client');
 
 import Posts from './posts/posts'
-import { AddPost } from './posts/addPost'
-import { Header } from './header'
+import  AddPost  from './posts/addPost'
+import  Header  from './header'
 
 class Home extends React.Component {
 

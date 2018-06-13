@@ -20,7 +20,7 @@ describe('<Posts />', () => {
   it('displays a title', () => {
     const posts = shallow(<Posts />);
 
-    expect(posts.text()).toEqual('PostsMessageDate');
+    expect(posts.text()).toEqual('PostsMessageDateg');
   });
 
   it('renders multiple posts', () => {

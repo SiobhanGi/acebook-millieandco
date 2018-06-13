@@ -10,12 +10,12 @@ describe('<Post />', () => {
   it('should display post contents and date', () => {
     const post = shallow(
       <Post post={{
-        content: 'Test post - ',
+        content: 'Test post',
         createdAt: '2018-06-12'
         }}
       />
     );
 
-    expect(post.text()).toEqual('Test post - 2018-06-12')
+    expect(post.text()).toEqual('Test post  2018-06-12')
   });
 });

@@ -7,3 +7,4 @@ dependency-reduced-pom.xml
 selenium-debug.log
 .DS_Store
 /src/resources/static/built
+/coverage

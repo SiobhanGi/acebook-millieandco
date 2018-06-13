@@ -32,5 +32,6 @@ class AddPost extends React.Component {
   }
 }
 
-AddPost.defaultProps = {}
+AddPost.defaultProps = {};
+
 export default AddPost;

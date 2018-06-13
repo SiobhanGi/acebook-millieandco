@@ -1,7 +1,7 @@
 import React from 'react';
 import Login from './login';
 
-export class Header extends React.Component {
+class Header extends React.Component {
       constructor(props) {
         super(props);
         this.state = { showLogin: false };
@@ -24,4 +24,6 @@ export class Header extends React.Component {
     );
   }
 }
+
+export default Header;
 

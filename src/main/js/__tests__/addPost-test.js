@@ -7,13 +7,28 @@ import AddPost from '../home/posts/addPost';
 
 Enzyme.configure({adapter: new Adapter()});
 
-describe('#handleChange', () => {
-  it('should equal the value', () => {
-    const addPost = shallow(
-      <AddPost />
-    );
-    const out = {target: { value: "test"}}
-    addPost.instance().handleChange(out)
-    expect(addPost.state().value).toEqual('test')
+describe('</AddPost', () => {
+  const addPost = shallow(
+    <AddPost createPost = {() => {}}  />
+  );
+  const out = {target: { value: "test"}};
+  const out2 = {preventDefault: () => {}};
+
+  describe('#handleChange', () => {
+
+    it('should equal the value', () => {
+      addPost.instance().handleChange(out)
+      expect(addPost.state().value).toEqual('test')
+    });
+  })
+
+  describe('#handleSubmit', () => {
+
+    it('sets the state back to empty', () => {
+      addPost.instance().handleChange(out);
+      addPost.instance().handleSubmit(out2);
+      expect(addPost.state().value).toEqual(' ')
+    });
   });
+
 });

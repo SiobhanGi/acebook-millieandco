@@ -16,6 +16,6 @@ describe('<Post />', () => {
       />
     );
 
-    expect(post.text()).toEqual('Test post - 2018-06-12')
+    expect(post.text()).toEqual('Test post  2018-06-12')
   });
 });

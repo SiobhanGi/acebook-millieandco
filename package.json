@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "description": "A template project for spring boot/react.js",
   "main": "index.js",
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/main/js/**.js",
+      "!**/featuretests/**"
+    ]
+  },
   "dependencies": {
     "babel-plugin-rewire": "^1.1.0",
     "babel-preset-env": "^1.7.0",
@@ -37,7 +44,7 @@
   "scripts": {
     "start": "npm run webpack",
     "webpack": "webpack -d --watch",
-    "test": "jest",
+    "test": "jest --coverage",
     "feature-tests": "nightwatch",
     "local": "java $JAVA_OPTS -Dspring.profiles.active=local -Dserver.port=$PORT -jar target/*.jar"
   },

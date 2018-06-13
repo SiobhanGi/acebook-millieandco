@@ -31,7 +31,7 @@ public class Person {
     private String email;
 
     @Column(name = "password")
-    private @JsonIgnore String password;
+    private String password;
 
     protected Person() {
     }

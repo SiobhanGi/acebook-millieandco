@@ -1,23 +1,21 @@
 import React from 'react';
+import Enzyme, {shallow} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
 import Post from '../posts/post';
-import { render } from "react-testing-library"
-import "dom-testing-library/extend-expect";
 
+Enzyme.configure({adapter: new Adapter()});
 
-describe('Display Post', function(){
+describe('<Post />', () => {
+  it('should display post contents and date', () => {
+    const post = shallow(
+      <Post post={{
+        content: 'Test post',
+        createdAt: '2018-06-12'
+        }}
+      />
+    );
 
-    it('components receives props and renders text', function(){
-
-        const{ getByTestId } = render(
-        <Post post = {{comment: "Hey, Folks! Welcome to Acebook!", createdAt: "2018-06-11"}}/>
-        );
-
-        expect(getByTestId("post-content")).toHaveTextContent(
-        "Hey, Folks! Welcome to Acebook! - 2018-06-11"
-        )
-
-    })
-
-})
-
-
+    expect(post.text()).toEqual('Test post - 2018-06-12')
+  });
+});

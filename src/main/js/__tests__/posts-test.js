@@ -1,19 +1,32 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import Enzyme, {shallow} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
 import Posts from '../posts/posts';
-import { render } from "react-testing-library";
-import "dom-testing-library/extend-expect";
 
-describe('Display multiple posts', function(){
+Enzyme.configure({adapter: new Adapter()});
 
-    const {getByTestId} = render(
-       <Posts />
+class FakePost extends React.Component {
+  render() {
+    return(
+      <div>Test</div>
     );
+  }
+}
 
-    it('displays a title', function(){
+Posts.__Rewire__('Post', FakePost)
 
-        expect(getByTestId("title-content")).toHaveTextContent("Posts")
+describe('<Posts />', () => {
+  it('displays a title', () => {
+    const posts = shallow(<Posts />);
 
-    })
+    expect(posts.text()).toEqual('Posts');
+  });
 
-})
+  it('renders multiple posts', () => {
+    const post = {_links: {self: {href: 'test'}}}
+    const posts = shallow(<Posts posts={ [post, post, post] } />);
+
+    expect(posts.find(FakePost).length).toEqual(3);
+  });
+});

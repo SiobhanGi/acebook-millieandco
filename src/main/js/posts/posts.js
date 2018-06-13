@@ -1,15 +1,12 @@
 import React from 'react';
 import Post from './post'
 
-const defaultProps = {
-    posts: []
-};
-
 class Posts extends React.Component {
 	render() {
 		var posts = this.props.posts.map(post =>
 			<Post key={post._links.self.href} post={post}/>
 		);
+
 		return (
             <div className="panel panel-default">
                 <div className="panel-heading">
@@ -32,6 +29,6 @@ class Posts extends React.Component {
 	}
 }
 
-Posts.defaultProps = defaultProps;
+Posts.defaultProps = { posts: [] };
 
 export default Posts;

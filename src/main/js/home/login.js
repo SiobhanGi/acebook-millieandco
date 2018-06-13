@@ -7,12 +7,24 @@ import React from 'react';
  class Login extends React.Component {
   render() {
     return (
-      <div className='login'>
-        <div className='login_inner'>
-          <h1>{ this.props.text } </h1>
-        <button onClick={this.props.closeLogin}>close me</button>
-        </div>
-      </div>
+          <div className='login'>
+            <div className='login_inner'>
+            <button onClick={this.props.closeLogin}>X</button>
+              <div className="row">
+                <div className="col-xs-8 col-xs-offset-2">
+                <form className="form-group">
+                  <label>Email:</label>
+                  <input className="form-control" type="text" />
+                  <br />
+                  <label>Password:</label>
+                  <input className="form-control" type="password" />
+                  <br />
+                  <input type="submit" value="submit" />
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
     );
   }
 }

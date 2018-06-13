@@ -1,5 +1,5 @@
 const React = require('react');
-const client = require('./client');
+const client = require('../client');
 
 import Posts from './posts/posts'
 import { AddPost } from './posts/addPost'

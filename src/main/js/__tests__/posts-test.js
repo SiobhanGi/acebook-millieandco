@@ -2,7 +2,7 @@ import React from 'react';
 import Enzyme, {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import Posts from '../posts/posts';
+import Posts from '../home/posts/posts';
 
 Enzyme.configure({adapter: new Adapter()});
 
@@ -20,7 +20,7 @@ describe('<Posts />', () => {
   it('displays a title', () => {
     const posts = shallow(<Posts />);
 
-    expect(posts.text()).toEqual('PostsMessageDateg');
+    expect(posts.text()).toEqual('PostsMessageDate');
   });
 
   it('renders multiple posts', () => {

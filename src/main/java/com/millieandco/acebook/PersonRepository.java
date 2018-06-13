@@ -4,7 +4,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.List;
 
-@RepositoryRestResource(exported = false)
+//@RepositoryRestResource(exported = false)
 public interface PersonRepository extends CrudRepository<Person, Long> {
     List<Person> findAll();
 

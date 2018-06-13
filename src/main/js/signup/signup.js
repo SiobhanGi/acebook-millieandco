@@ -13,7 +13,7 @@ class Signup extends React.Component {
 	createUser(user) {
 		client({
 			method: 'POST',
-			path: '/api/users',
+			path: '/api/persons',
 			entity: user,
 			headers: {'Content-Type': 'application/json'}
 		});
@@ -33,6 +33,7 @@ class Signup extends React.Component {
 		var newUser = {};
 		newUser['firstName'] = this.state.firstName;
 		newUser['lastName'] = this.state.lastName;
+		newUser['username'] = this.state.username;
 		newUser['email'] = this.state.email;
 		newUser['password'] = this.state.password;
 
@@ -51,6 +52,8 @@ class Signup extends React.Component {
 					<input type="text" name="firstName" onChange={this.handleChange} className = "first-name span3"/>
 					<label>Last Name</label>
 					<input type="text" name="lastName" onChange={this.handleChange} className = "last-name span3"/>
+					<label>Username</label>
+                    <input type="text" name="username" onChange={this.handleChange} className = "username span3"/>
 					<label>Email Address</label>
 					<input type="email" name="email" onChange={this.handleChange} className = "email span3"/>
 					<label>Password</label>

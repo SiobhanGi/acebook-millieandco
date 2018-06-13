@@ -5,10 +5,10 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import java.util.List;
 
 @RepositoryRestResource(exported = false)
-public interface UserRepository extends CrudRepository<User, Long> {
-    List<User> findAll();
+public interface PersonRepository extends CrudRepository<Person, Long> {
+    List<Person> findAll();
 
-    User save(User user);
+    Person save(Person person);
 
-    User findByEmail(String email);
+    Person findByUsername(String username);
 }

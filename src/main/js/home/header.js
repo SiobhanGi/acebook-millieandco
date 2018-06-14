@@ -16,8 +16,8 @@ export class Header extends React.Component {
         <div>
             <ul className="nav nav-pills">
               <li className="navbar-right sign" role="presentation"><a className="sign-up" href="/signup">Sign Up</a></li>
-              <li className="navbar-right" role="presentation"><a href="#" onClick={this.toggleLogin}>Login</a></li>
-              { this.state.showLogin ? <Login closeLogin={this.toggleLogin} /> : null }
+              { this.props.login && <li className="navbar-right" role="presentation"><a href="#" onClick={this.toggleLogin}>Login</a></li>}
+              {  this.state.showLogin ? <Login closeLogin={this.toggleLogin} /> : null }
             </ul>
         </div>
 

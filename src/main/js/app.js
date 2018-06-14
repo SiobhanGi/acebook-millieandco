@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import Home from './home/home';
 import Signup from './signup/signup';
-import Login from '.src/main/js/login/login.js';
+import Login from './login/login';
 import Logout from './logout/logout';
 
 import { BrowserRouter as Switch, Route} from 'react-router-dom';

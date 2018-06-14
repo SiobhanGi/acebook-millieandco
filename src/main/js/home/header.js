@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from './main/js/login/login.js';
+import Login from '.src/main/js/login/login.js';
 import client from '../client'
 import { Redirect } from 'react-router'
 

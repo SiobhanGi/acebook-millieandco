@@ -33,7 +33,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             .httpBasic()
                 .and()
             .logout()
-                .logoutSuccessUrl("/");
+                .logoutSuccessUrl("/login");
     }
 
     @SuppressWarnings("deprecation")

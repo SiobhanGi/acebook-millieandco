@@ -18,19 +18,9 @@
    </head>
 <body>
 
-    <!-- tag::logout[] -->
-    <div>
-        Hello, <span id="name" th:text="${#authentication.name}">person</span>.
-        <form th:action="@{/logout}" method="post">
-            <input type="submit" value="Log Out"/>
-        </form>
-    </div>
-    <!-- end::logout[] -->
-
     <div id="app"></div>
 
     <script src="built/bundle.js"></script>
-
 
 </body>
 </html>

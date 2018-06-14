@@ -1,10 +1,6 @@
 import React from 'react';
 import { Header } from '../home/header'
 
-const defaultProps = {
-  text: ""
-};
-
  class Login extends React.Component {
   render() {
     return (

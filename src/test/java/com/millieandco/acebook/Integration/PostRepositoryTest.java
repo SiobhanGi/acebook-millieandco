@@ -45,4 +45,5 @@ public class PostRepositoryTest {
         assertEquals(posts.get(0).getContent(), "first post");
         assertEquals(posts.get(1).getContent(), "second post");
     }
+
 }

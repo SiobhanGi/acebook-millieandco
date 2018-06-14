@@ -13,7 +13,6 @@ class Home extends React.Component {
 		this.createPost = this.createPost.bind(this);
 	}
 
-
     componentDidMount() {
        this.loadPostsFromServer();
     }
@@ -35,7 +34,6 @@ class Home extends React.Component {
 			this.loadPostsFromServer();
 		});
 	}
-
 
     render() {
         return (<div>

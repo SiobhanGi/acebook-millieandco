@@ -1,8 +1,5 @@
 import React from 'react';
 
-   const defaultProps = {
-       text: ""
-   };
 
 class Login extends React.Component {
  render() {

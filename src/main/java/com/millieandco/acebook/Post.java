@@ -26,7 +26,6 @@ public class Post {
     private LocalDate createdAt;
 
     @Column(name = "likes")
-
     private long likes;
 
     @OneToMany

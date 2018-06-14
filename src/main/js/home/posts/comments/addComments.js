@@ -19,15 +19,14 @@ class AddComments extends React.Component {
     newComment['post'] = this.props.post._links.self.href;
     this.props.createComment(newComment);
     this.setState({ value: ' ' });
-
   }
 
   render() {
     return (
       <form onSubmit={this.handleSubmit} >
         <div className="col-md-4 goback">
-        <input className="comment-input" type="text" placeholder = "Add New Comment" onChange={this.handleChange} value={this.state.value} required />
-        <input type="submit" value="Submit" />
+          <input className="comment-input" type="text" placeholder = "Add New Comment" onChange={this.handleChange} value={this.state.value} required />
+          <input type="submit" value="Submit" />
        </div>
       </form>
     );
@@ -37,5 +36,3 @@ class AddComments extends React.Component {
 AddComments.defaultProps = {};
 
 export default AddComments;
-
-

@@ -1,9 +1,5 @@
 import React from 'react';
 
-    const defaultProps = {
-        text: ""
-    };
-
  class Logout extends React.Component {
   render() {
     return (

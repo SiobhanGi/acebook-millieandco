@@ -1,6 +1,6 @@
 import React from 'react';
 import AddComments from './comments/addComments';
-import Comments from './comments/Comments'
+import Comments from './comments/comments'
 const client = require('../../client');
 
 class Post extends React.Component{

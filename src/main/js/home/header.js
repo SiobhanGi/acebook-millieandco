@@ -5,9 +5,10 @@ import { Redirect } from 'react-router'
 
 const defaultProps = {
   showLogout: true,
+  showSignUp: true
 };
 
-export class Header extends React.Component {
+class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = { showLogin: false, redirect: false };
@@ -27,7 +28,7 @@ export class Header extends React.Component {
     return (
       <div>
         <ul className="nav nav-pills">
-          <li className="navbar-right sign" role="presentation"><a className="sign-up" href="/signup">Sign Up</a></li>
+          { this.props.showSignUp && <li className="navbar-right sign" role="presentation"><a className="sign-up" href="/signup">Sign Up</a></li>}
           { this.props.showLogout && <li className="navbar-right sign" role="presentation"><a className="log-out" href="#" onClick={this.handleClick}>Log Out</a></li> }
           { this.props.login && <li className="navbar-right" role="presentation"><a href="#" onClick={this.toggleLogin}>Login</a></li>}
           { this.state.redirect && <Redirect to="/login"/> }
@@ -38,3 +39,5 @@ export class Header extends React.Component {
 }
 
 Header.defaultProps = defaultProps;
+
+export default Header;

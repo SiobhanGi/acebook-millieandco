@@ -1,6 +1,6 @@
 import React from 'react';
 import client from '../client';
-import { Route, Redirect} from 'react-router';
+import { Route, Redirect } from 'react-router';
 
 class Signup extends React.Component {
 	constructor(props) {
@@ -60,7 +60,7 @@ class Signup extends React.Component {
 					<input type="password" name="password" onChange={this.handleChange} className = "password span3"/>
 					<input type="submit" value="Sign up" className = "submit btn btn-primary pull-right"/>
 				</form>
-				{ this.state.redirectToNewPage && <Redirect to="/" /> }
+				{ this.state.redirectToNewPage && <Redirect to="/login" /> }
 			</div>
 		)
 	}

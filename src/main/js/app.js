@@ -6,7 +6,7 @@ import Signup from './signup/signup';
 import Login from './login/login';
 import Logout from './logout/logout';
 
-import { BrowserRouter as Switch, Route} from 'react-router-dom';
+import { BrowserRouter as Switch, Route } from 'react-router-dom';
 
 ReactDOM.render(
   <Switch>

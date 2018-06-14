@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header } from '../home/header'
+import Header from '../home/header'
 
  class Login extends React.Component {
   render() {

@@ -2,8 +2,8 @@ const React = require('react');
 const client = require('../client');
 
 import Posts from './posts/posts'
-import  AddPost  from './posts/addPost'
-import  Header  from './header'
+import AddPost  from './posts/addPost'
+import Header  from './header'
 
 class Home extends React.Component {
 
@@ -13,15 +13,15 @@ class Home extends React.Component {
 		this.createPost = this.createPost.bind(this);
 	}
 
-    componentDidMount() {
-       this.loadPostsFromServer();
-    }
+  componentDidMount() {
+     this.loadPostsFromServer();
+  }
 
-    loadPostsFromServer() {
-        client({method: 'GET', path: '/api/posts'}).then(response => {
-             this.setState({posts: response.entity._embedded.posts});
-        });
-    }
+  loadPostsFromServer() {
+      client({method: 'GET', path: '/api/posts'}).then(response => {
+           this.setState({posts: response.entity._embedded.posts});
+      });
+  }
 
 	createPost(post) {
 		client({
@@ -37,7 +37,7 @@ class Home extends React.Component {
 
     render() {
         return (<div>
-                <Header />
+                <Header showSignUp={false} />
                 <Posts posts={this.state.posts.reverse()}/>
                 <AddPost createPost={this.createPost} />
           </div>

@@ -6,12 +6,14 @@ const client = require('../../client');
 
 class Post extends React.Component {
 
+
   constructor(props) {
     super(props);
     this.state = {comments: [] };
     this.createComments = this.createComments.bind(this);
   }
-  
+
+
   componentDidMount() {
     this.loadCommentsFromServer(this.getid(this.props.post._links.self.href))
   }
@@ -43,7 +45,7 @@ class Post extends React.Component {
     return (
 
     <tr>
-      <td class="text-area">{this.props.post.content}<br />
+      <td>{this.props.post.content}
         <Likes post={this.props.post}  id = {this.getid(this.props.post._links.self.href)} />
         <br />
         <AddComments createComment={this.createComments} post={this.props.post} />

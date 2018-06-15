@@ -4,12 +4,17 @@
 
 http://acebook-millieandco.herokuapp.com/
 
+### Wireframe 
+
+![alt_text](http://i67.tinypic.com/25s2x53.jpg)
+
 ### Description 
 
-Acebook is a social media site implemented using a Java SpringBoot Tech Stack. The current features include: 
+Acebook is a social media site implemented using a Java SpringBoot React.js Tech Stack. The current features include: 
 
-- Sign Up and Login / Log Out 
-- Post messages on the main page  
+- Sign Up
+- Login / Log Out 
+- Post messages on the main page
 - Post comments on messages
 - Like messages
 
@@ -25,7 +30,7 @@ https://acebook-millieandco.herokuapp.com/
 - Maven
 - npm 
 - Postgres SQL 
-- IDE of your choice 
+- IDE of your choice (recommended Intellij)
 
 Fork and Clone the Repo to start using it. 
 
@@ -38,19 +43,33 @@ CREATE DATABASE acebook;
 
 ```
 
-Setup the Application Configuration to run this VM option in order to use the application with a local database:
+In order to run the application with a local database, you can edit Application Configuration by adding this line to the VM options.
 
 ```
 -Dspring.profiles.active=local
 ```
 
-### Technology Used 
+
+To edit the Application Configuration via Intellij follow these steps: 
+
+1) In applications, click on 'Edit Configurations' from the drop down menu.
+
+![alt text](http://i63.tinypic.com/2jbm6vd.png)
+
+2) In the pop up box, click the + to create a new Java configuration
+
+3) Edit main options and VM options to match below.
+
+![alt_text](http://i68.tinypic.com/2rnd6yq.jpg)
+
+
+### Built with
 
 Web Application 
 
 - Maven - automatic dependency management 
 - Spring Boot - web application framework 
-- React - building the user interface
+- React.js - building the user interface
 - Postgres - Database 
 
 Testing Frameworks 
@@ -58,4 +77,16 @@ Testing Frameworks
 - Nightwatch - Feature Testing 
 - Junit - Unit testing Java 
 - Jest - Unit testing React 
+
+### Running the tests
+
+To run Jest with coverage
+```npm test```
+
+To run Nightwatch
+```npm feature-tests```
+
+To run Junit with coverage
+![alt_text](http://i67.tinypic.com/33oqic1.png)
+
 

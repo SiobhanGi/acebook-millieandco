@@ -8,6 +8,7 @@ http://acebook-millieandco.herokuapp.com/
 
 ![alt_text](http://i67.tinypic.com/25s2x53.jpg)
 
+
 ### Description 
 
 Acebook is a social media site implemented using a Java SpringBoot React.js Tech Stack. The current features include: 
@@ -21,6 +22,8 @@ Acebook is a social media site implemented using a Java SpringBoot React.js Tech
 You can use the latest version of the site on: 
 
 https://acebook-millieandco.herokuapp.com/
+
+
 
 ### Developer Instructions 
 
@@ -63,20 +66,27 @@ To edit the Application Configuration via Intellij follow these steps:
 ![alt_text](http://i68.tinypic.com/2rnd6yq.jpg)
 
 
+
+
 ### Built with
 
-Web Application 
+
+#### Web Application 
 
 - Maven - automatic dependency management 
 - Spring Boot - web application framework 
 - React.js - building the user interface
 - Postgres - Database 
 
-Testing Frameworks 
+
+
+#### Testing Frameworks 
 
 - Nightwatch - Feature Testing 
 - Junit - Unit testing Java 
 - Jest - Unit testing React 
+
+
 
 ### Running the tests
 
@@ -89,4 +99,15 @@ To run Nightwatch
 To run Junit with coverage
 ![alt_text](http://i67.tinypic.com/33oqic1.png)
 
+
+
+### Contributors
+
+Charlene Chetcuti
+
+Siobhan Goggins
+
+John Newman
+
+William Powell
 
